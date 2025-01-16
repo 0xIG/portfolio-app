@@ -1,1 +1,139 @@
-<app-header></app-header>
+<header class="fixed flex w-full flex-col py-2">
+    <div class="-lg:w-full mx-auto flex items-center justify-center">
+        <nav class="hidden gap-8 font-medium text-slate-600 lg:flex">
+            <button class="block px-4 py-2 hover:bg-slate-400 hover:text-white">
+                Home
+            </button>
+            <button class="block px-4 py-2 hover:bg-slate-400 hover:text-white">
+                Works
+            </button>
+        </nav>
+
+        <button
+            type="button"
+            class="ml-auto mr-4 min-w-[32px] lg:hidden"
+            (click)="toggleMobileMenu()">
+            <img height="32" width="32" [src]="'icons/menu.svg'" alt="" />
+        </button>
+    </div>
+    <div class="text-right lg:hidden" *ngIf="$mobileMenuOpen.getValue()">
+        <nav class="p-2">
+            <a href="#" class="block p-2 hover:bg-slate-400 hover:text-white"
+                >Home</a
+            >
+            <a href="#" class="block p-2 hover:bg-slate-400 hover:text-white"
+                >Works</a
+            >
+            <!-- <a
+            href=""
+            class="block rounded-md p-2 hover:bg-slate-400 hover:text-white"
+            >Technologies</a
+        > -->
+        </nav>
+    </div>
+</header>
+
+<main class="-lg:px-8 container mx-auto p-20 lg:pt-32">
+    <div #about class="flex flex-col-reverse items-center gap-10 lg:flex-row">
+        <div class="flex flex-col items-center lg:items-start">
+            <h1 class="text-center text-4xl text-slate-900 lg:text-left">
+                Hi, I am Grigory Ivanov, Web3 Developer
+            </h1>
+            <p class="mt-6 text-center lg:text-left">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                similique saepe odio sapiente velit, facere quas quidem
+                excepturi sunt accusamus. Commodi maiores eaque doloremque
+                accusantium dolorem, velit eligendi voluptate iste!
+            </p>
+            <button
+                type="button"
+                class="mt-6 bg-slate-400 px-4 py-2 text-white">
+                My Resume
+            </button>
+        </div>
+        <img
+            class="-xs:hidden size-[250px] rounded-[50%]"
+            src="https://lh3.googleusercontent.com/d/1XDgtEq3-kaTKrJEvG-eUV51mCX5T7kiH"
+            alt="" />
+    </div>
+    <div #works>
+        <div>
+            <div>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio
+                voluptatibus cum in totam debitis. Officiis, minima. Praesentium
+                tempore possimus sit cumque expedita, aperiam provident rerum
+                voluptatibus accusantium minus optio veniam.
+            </div>
+            <div>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio
+                voluptatibus cum in totam debitis. Officiis, minima. Praesentium
+                tempore possimus sit cumque expedita, aperiam provident rerum
+                voluptatibus accusantium minus optio veniam.
+            </div>
+            <div>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio
+                voluptatibus cum in totam debitis. Officiis, minima. Praesentium
+                tempore possimus sit cumque expedita, aperiam provident rerum
+                voluptatibus accusantium minus optio veniam.
+            </div>
+            <div>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio
+                voluptatibus cum in totam debitis. Officiis, minima. Praesentium
+                tempore possimus sit cumque expedita, aperiam provident rerum
+                voluptatibus accusantium minus optio veniam.
+            </div>
+            <div>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio
+                voluptatibus cum in totam debitis. Officiis, minima. Praesentium
+                tempore possimus sit cumque expedita, aperiam provident rerum
+                voluptatibus accusantium minus optio veniam.
+            </div>
+            <h2>My Works</h2>
+            <h3>Portfolio site</h3>
+            <div>
+                <a href="https://github.com/0xIG/portfolio-app"
+                    ><button>GitHub</button></a
+                >
+            </div>
+        </div>
+    </div>
+    <div class="hidden" #technologies>
+        <h2>Technologies i use</h2>
+        <div>
+            <div>
+                <h3>Node.js</h3>
+                <img src="logo/node_light.svg" />
+            </div>
+            <div>
+                <h3>Solidity</h3>
+                <img src="logo/solidity.svg" />
+            </div>
+            <div>
+                <h3>Hardhat</h3>
+                <img src="logo/hardhat.svg" />
+            </div>
+            <div>
+                <h3>Angular</h3>
+                <img src="logo/angular.png" />
+            </div>
+            <div>
+                <h3>NestJS</h3>
+                <img src="logo/nestjs.png" />
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="">
+    <div>
+        <div>
+            <a href="https://t.me/ivanovgv1998"
+                ><img width="32" height="32" src="logo/telegram32x32.png"
+            /></a>
+        </div>
+        <div>
+            <a href="https://github.com/0xIG"
+                ><img width="32" height="32" src="logo/github32x32.png"
+            /></a>
+        </div>
+    </div>
+</footer>
