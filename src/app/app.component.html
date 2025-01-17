@@ -1,5 +1,5 @@
-<header class="fixed flex w-full flex-col py-2">
-    <div class="-lg:w-full mx-auto flex items-center justify-center">
+<header class="fixed flex w-full flex-col bg-slate-50/90 py-2">
+    <div class="mx-auto flex items-center justify-center -lg:w-full">
         <nav class="hidden gap-8 font-medium text-slate-600 lg:flex">
             <button class="block px-4 py-2 hover:bg-slate-400 hover:text-white">
                 Home
@@ -7,6 +7,12 @@
             <button class="block px-4 py-2 hover:bg-slate-400 hover:text-white">
                 Works
             </button>
+            <a href="mailto:ivanov.grigory@proton.me"
+                ><button
+                    class="block px-4 py-2 hover:bg-slate-400 hover:text-white">
+                    Contact
+                </button>
+            </a>
         </nav>
 
         <button
@@ -18,23 +24,18 @@
     </div>
     <div class="text-right lg:hidden" *ngIf="$mobileMenuOpen.getValue()">
         <nav class="p-2">
-            <a href="#" class="block p-2 hover:bg-slate-400 hover:text-white"
+            <a href="#" class="block p-2 hover:bg-slate-400/50 hover:text-white"
                 >Home</a
             >
-            <a href="#" class="block p-2 hover:bg-slate-400 hover:text-white"
+            <a href="#" class="block p-2 hover:bg-slate-400/50 hover:text-white"
                 >Works</a
             >
-            <!-- <a
-            href=""
-            class="block rounded-md p-2 hover:bg-slate-400 hover:text-white"
-            >Technologies</a
-        > -->
         </nav>
     </div>
 </header>
 
-<main class="-lg:px-8 container mx-auto p-20 lg:pt-32">
-    <div #about class="flex flex-col-reverse items-center gap-10 lg:flex-row">
+<main #about class="container mx-auto p-20 lg:pt-32 -md:px-0">
+    <div class="flex flex-col-reverse items-center gap-10 lg:flex-row">
         <div class="flex flex-col items-center lg:items-start">
             <h1 class="text-center text-4xl text-slate-900 lg:text-left">
                 Hi, I am Grigory Ivanov, Web3 Developer
@@ -47,53 +48,42 @@
             </p>
             <button
                 type="button"
-                class="mt-6 bg-slate-400 px-4 py-2 text-white">
+                class="mt-6 bg-slate-400 px-4 py-2 text-white hover:bg-slate-600">
                 My Resume
             </button>
         </div>
         <img
-            class="-xs:hidden size-[250px] rounded-[50%]"
+            class="size-[250px] rounded-[50%] -xs:hidden"
             src="https://lh3.googleusercontent.com/d/1XDgtEq3-kaTKrJEvG-eUV51mCX5T7kiH"
             alt="" />
     </div>
-    <div #works>
-        <div>
-            <div>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio
-                voluptatibus cum in totam debitis. Officiis, minima. Praesentium
-                tempore possimus sit cumque expedita, aperiam provident rerum
-                voluptatibus accusantium minus optio veniam.
-            </div>
-            <div>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio
-                voluptatibus cum in totam debitis. Officiis, minima. Praesentium
-                tempore possimus sit cumque expedita, aperiam provident rerum
-                voluptatibus accusantium minus optio veniam.
-            </div>
-            <div>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio
-                voluptatibus cum in totam debitis. Officiis, minima. Praesentium
-                tempore possimus sit cumque expedita, aperiam provident rerum
-                voluptatibus accusantium minus optio veniam.
-            </div>
-            <div>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio
-                voluptatibus cum in totam debitis. Officiis, minima. Praesentium
-                tempore possimus sit cumque expedita, aperiam provident rerum
-                voluptatibus accusantium minus optio veniam.
-            </div>
-            <div>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio
-                voluptatibus cum in totam debitis. Officiis, minima. Praesentium
-                tempore possimus sit cumque expedita, aperiam provident rerum
-                voluptatibus accusantium minus optio veniam.
-            </div>
-            <h2>My Works</h2>
-            <h3>Portfolio site</h3>
-            <div>
-                <a href="https://github.com/0xIG/portfolio-app"
-                    ><button>GitHub</button></a
-                >
+    <hr #works class="my-6" />
+    <div>
+        <h2 class="mb-4 text-center text-2xl text-slate-900 lg:text-left">
+            My Works
+        </h2>
+        <div class="flex flex-col">
+            <div class="flex gap-4 border p-4 shadow-md -sm:flex-col">
+                <img
+                    class="h-[120px] w-[240px]"
+                    src="https://lh3.googleusercontent.com/d/1rz9WJ-9eUmtZFliRJbgvsuJF6YQfdhAu"
+                    alt="" />
+                <div class="flex flex-col gap-2">
+                    <h3 class="text-xl text-slate-900">Portfolio site</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Quia totam recusandae quaerat corrupti inventore
+                        voluptatem illum id voluptatum? Unde fugit praesentium
+                        fuga repellendus blanditiis. Quibusdam at molestias
+                        voluptate quos eveniet.
+                    </p>
+                    <a href="https://github.com/0xIG/portfolio-app">
+                        <button
+                            class="rounded-md bg-slate-400 px-2 py-1 text-white hover:bg-slate-600 -sm:text-center">
+                            code
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -122,18 +112,22 @@
             </div>
         </div>
     </div>
-</main>
-<footer class="">
-    <div>
+    <hr #contacts class="mb-10 mt-6" />
+    <div class="flex justify-center gap-6">
         <div>
             <a href="https://t.me/ivanovgv1998"
-                ><img width="32" height="32" src="logo/telegram32x32.png"
+                ><img width="32" height="32" src="logo/telegram.png"
             /></a>
         </div>
         <div>
             <a href="https://github.com/0xIG"
-                ><img width="32" height="32" src="logo/github32x32.png"
+                ><img width="32" height="32" src="logo/github.png"
+            /></a>
+        </div>
+        <div>
+            <a href="mailto:ivanov.grigory@proton.me"
+                ><img width="32" height="32" src="logo/email.png"
             /></a>
         </div>
     </div>
-</footer>
+</main>

@@ -8,7 +8,7 @@ import { BehaviorSubject } from 'rxjs';
     templateUrl: './app.component.html',
 })
 export class AppComponent {
-    $mobileMenuOpen = new BehaviorSubject<boolean>(false);
+    public $mobileMenuOpen = new BehaviorSubject<boolean>(false);
 
     public toggleMobileMenu() {
         this.$mobileMenuOpen.next(!this.$mobileMenuOpen.getValue());
