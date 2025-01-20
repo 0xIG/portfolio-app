@@ -19,3 +19,5 @@ jobs:
               run: npm i
             - name: Build application
               run: npm run build:github
+            - name: Deploy to GitHub Pages
+              run: npm run deploy:github

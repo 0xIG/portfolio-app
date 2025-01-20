@@ -9,7 +9,7 @@
         "lint": "ng lint",
         "format": "npx prettier --write .",
         "build:github": "ng build --c production",
-        "deploy:github": "ng deploy --base-href /portfolio"
+        "deploy:github": "ng deploy --base-href=/portfolio-app/"
     },
     "private": true,
     "dependencies": {
