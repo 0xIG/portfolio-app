@@ -8,7 +8,7 @@
         "watch": "ng build --watch --configuration development",
         "lint": "ng lint",
         "format": "npx prettier --write .",
-        "bulid:github": "ng build --prod",
+        "build:github": "ng build --prod",
         "deploy:github": "ng deploy --base-href /portfolio"
     },
     "private": true,
